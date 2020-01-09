@@ -14,8 +14,6 @@
 
 namespace HAMWORKS\Snippet_Injection;
 
-require dirname( __FILE__ ) . '/vendor/autoload.php';
-
 const PLUGIN_FILE = __FILE__;
 
 /**
