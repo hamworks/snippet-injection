@@ -7,7 +7,7 @@
  * Author URI:      https://ham.works
  * Text Domain:     snippet-injection
  * Domain Path:     /languages
- * Version: 0.1.2
+ * Version: 0.1.3
  *
  * @package         HAMWORKS\Snippet_Injection
  */
