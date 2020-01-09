@@ -1,9 +1,17 @@
 <?php
-
+/**
+ * Customizer.
+ *
+ * @package HAMWORKS\Snippet_Injection
+ */
 
 namespace HAMWORKS\Snippet_Injection;
 
-
+/**
+ * Class Customizer
+ *
+ * @package HAMWORKS\Snippet_Injection
+ */
 class Customizer {
 
 	/**
@@ -14,6 +22,11 @@ class Customizer {
 		add_action( 'customize_register', array( $this, 'register_settings' ) );
 	}
 
+	/**
+	 * Register customize section.
+	 *
+	 * @param \WP_Customize_Manager $wp_customize WP_Customize_Manager instance.
+	 */
 	public function register_section( \WP_Customize_Manager $wp_customize ) {
 		$wp_customize->add_section(
 			'snippet-injection',
@@ -24,6 +37,13 @@ class Customizer {
 		);
 	}
 
+	/**
+	 * Customizer settings.
+	 *
+	 * @param \WP_Customize_Manager $wp_customize WP_Customize_Manager instance.
+	 * @param string                $id option name.
+	 * @param array                 $attr attributes.
+	 */
 	private function cusomitzer_setting( \WP_Customize_Manager $wp_customize, $id, $attr ) {
 		$default_attr = array(
 			'label'       => '',
@@ -61,19 +81,31 @@ class Customizer {
 	 * @param \WP_Customize_Manager $wp_customize WP_Customize_Manager instance.
 	 */
 	public function register_settings( \WP_Customize_Manager $wp_customize ) {
-		$this->cusomitzer_setting( $wp_customize, 'snippet-injection-wp-head', array(
-			'label'       => __( '<head>', 'snippet-injection' ),
-			'description' => esc_html__( '<head>', 'snippet-injection' )
-		) );
+		$this->cusomitzer_setting(
+			$wp_customize,
+			'snippet-injection-wp-head',
+			array(
+				'label'       => __( '<head>', 'snippet-injection' ),
+				'description' => esc_html__( '<head>', 'snippet-injection' ),
+			)
+		);
 
-		$this->cusomitzer_setting( $wp_customize, 'snippet-injection-wp-body-open', array(
-			'label'       => __( 'After <body>', 'snippet-injection' ),
-			'description' => esc_html__( 'After <body>', 'snippet-injection' )
-		) );
+		$this->cusomitzer_setting(
+			$wp_customize,
+			'snippet-injection-wp-body-open',
+			array(
+				'label'       => __( 'After <body>', 'snippet-injection' ),
+				'description' => esc_html__( 'After <body>', 'snippet-injection' ),
+			)
+		);
 
-		$this->cusomitzer_setting( $wp_customize, 'snippet-injection-wp-footer', array(
-			'label'       => __( 'before </body>', 'snippet-injection' ),
-			'description' => esc_html__( 'before </body>', 'snippet-injection' )
-		) );
+		$this->cusomitzer_setting(
+			$wp_customize,
+			'snippet-injection-wp-footer',
+			array(
+				'label'       => __( 'before </body>', 'snippet-injection' ),
+				'description' => esc_html__( 'before </body>', 'snippet-injection' ),
+			)
+		);
 	}
 }

@@ -8,7 +8,8 @@
  * Text Domain:     snippet-injection
  * Domain Path:     /languages
  * Version: 0.1.1
- * @package         Snippet_Injection
+ *
+ * @package         HAMWORKS\Snippet_Injection
  */
 
 namespace HAMWORKS\Snippet_Injection;
@@ -34,13 +35,12 @@ const PLUGIN_FILE = __FILE__;
  * @type string $Network Multisite.
  * }
  */
-
 function get_plugin_data() {
 	static $data = null;
 	if ( empty( $data ) ) {
 		$data = \get_file_data(
 			__FILE__,
-			[
+			array(
 				'Name'        => 'Plugin Name',
 				'PluginURI'   => 'Plugin URI',
 				'Version'     => 'Version',
@@ -50,7 +50,7 @@ function get_plugin_data() {
 				'TextDomain'  => 'Text Domain',
 				'DomainPath'  => 'Domain Path',
 				'Network'     => 'Network',
-			]
+			)
 		);
 	}
 
