@@ -1,10 +1,12 @@
 <?php
 /**
- * Plugin Name:     snippet-injection
+ * Plugin Name:     Snippet Injection
  * Plugin URI:      https://github.com/team-hamworks/snippet-injection
- * Description:     snippet-injection.
- * Author:          hamworks
+ * Description:     Inject code Snippet to wp_head, wp_footer and wp_body_open.
+ * Author:          HAMWORKS
  * Author URI:      https://ham.works
+ * License:         GPLv2 or later
+ * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     snippet-injection
  * Domain Path:     /languages
  * Version: 0.1.3
@@ -13,6 +15,7 @@
  */
 
 namespace HAMWORKS\Snippet_Injection;
+
 
 const PLUGIN_FILE = __FILE__;
 

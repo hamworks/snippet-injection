@@ -65,7 +65,7 @@ class Customizer {
 				$wp_customize,
 				$id,
 				array(
-					'code_type'        => 'text/html',
+					'code_type'   => 'text/html',
 					'label'       => $attr['label'],
 					'description' => $attr['description'],
 					'priority'    => 10,
