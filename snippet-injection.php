@@ -9,7 +9,7 @@
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     snippet-injection
  * Domain Path:     /languages
- * Version: 0.1.3
+ * Version: 0.1.4
  *
  * @package         HAMWORKS\Snippet_Injection
  */
